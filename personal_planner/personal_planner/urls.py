@@ -21,11 +21,13 @@ from django.shortcuts import redirect
 
 
 from website.views import welcome, date, about
+from meetings.views import detail
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', lambda request: redirect('welcome.html')), 
-    path('welcome.html', welcome),
+    path('welcome.html', welcome, name="welcome"),
     path('date', date),
     path('about', about),
+    path('meetings/<int:id>', detail, name="detail"),
 ]
