@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block title%}Meetings List{%endblock%}
+
+{% block content %}
+    <div class="list-box">
+        <p>Current active meetings: {{ num_meetings }}</p>
+        <ul class="centered-list">
+            {% for meeting in meetings %}
+                <li>
+                    <a href="{%url 'detail' meeting.id%}"><input type="checkbox"> Meeting at {{ meeting.time }} on {{ meeting.date }} in room {{ meeting.room }}</a>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+{% endblock %}

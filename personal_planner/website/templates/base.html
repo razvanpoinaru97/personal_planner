@@ -1,0 +1,21 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{%block title%}{%endblock%}</title>
+    <link rel="stylesheet" href="{% static 'website/style.css' %}">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="sticky-header">
+        {% if request.path != '/welcome.html' %}
+            <a href="{% url 'welcome' %}" class="back-button">
+                <img src="{% static 'website/home.png' %}" alt="Home" class="back-icon">
+            </a>
+        {% endif %}
+        <h1>Razvan's Personal Planner</h1>
+    </div>
+        {% block content %}
+        {% endblock %}
+</body>
+</html>

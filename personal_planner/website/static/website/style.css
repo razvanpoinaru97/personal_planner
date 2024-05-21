@@ -1,0 +1,172 @@
+.rounded-rectangle {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    height: 200px;
+    width: 30%;
+    float: left;
+    margin-right: 20px;
+    margin-left: 20px; /* Add this line to set the left margin */
+    overflow: hidden; /* Add this line to hide overflowing text */
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 2%;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    margin: 0;
+    padding: 0;
+}
+
+.sticky-header {
+    position: sticky;
+    top: 0;
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.list-box {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 0 auto;
+    width: fit-content;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+ul.centered-list {
+    text-align: center;
+}
+
+ul.centered-list li {
+    text-align: left;
+}
+
+.sticky-header h1 {
+    color: #333;
+    text-align: center;
+    margin-top: 20px;
+}
+
+p {
+    color: #666;
+    font-size: 16px;
+    margin-top: 20px;
+}
+
+h3 {
+    color: #555;
+    font-size: 20px;
+    margin-top: 20px;
+}
+.rounded-rectangle .link-rectangle {
+    color: #666;
+    font-size: 16px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 30px;
+}
+
+li {
+    color: #333;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.back-button {
+    position: absolute;
+    top: 10px;
+    left: 15px;
+    font-size: 20px;
+    padding: 10px 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-family: Arial, sans-serif;
+    color: #ffffff;
+    background-color: #f2f2f2, 0.5;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+    text-decoration: none; /* Added to remove underline */
+}
+
+.back-button:hover {
+    background-color: #f2f2f2, 0.6;
+    color: #ffffff;
+    text-decoration: none; /* Added to remove underline */
+}
+
+.back-button:active {
+    color: #ffffff;
+    text-decoration: none; /* Added to remove underline */
+}
+
+.back-icon {
+    height: 20px; /* Set the height of the back-icon */
+    width: auto; /* Maintain the aspect ratio */
+    max-height: 100%; /* Add this line to limit the height to the parent container */
+    max-width: 100%; /* Add this line to limit the width to the parent container */
+}
+
+.list-box {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 0 auto;
+    margin-top: 5px;
+    width: fit-content;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+ul.centered-list {
+    text-align: center;
+    height: 66vh;
+    overflow-y: scroll;
+}
+
+ul.centered-list li {
+    text-align: left;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 30px;
+}
+
+li {
+    color: #333;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.centered-rectangle{
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.detail-container{
+    background-color: #f2f2f2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    margin: 0;
+}
+
+
