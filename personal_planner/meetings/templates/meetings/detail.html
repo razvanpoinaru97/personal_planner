@@ -10,68 +10,18 @@
         <p>Time: {{ meeting.time }}</p>
         <p>Location: {{meeting.room}}</p>
         <p>Description: {{ meeting.description }}</p>
+
+        <ul>
+            {% for participant in meeting.participants.all %}
+                <li>{{ participant }}</li>
+            {% endfor %}
+        </ul>
+        
+        <div class="text-right">
+            <a href="{% url 'edit' meeting.id %}" class="btn btn-light mr-4">Edit</a>
+            <a href="{% url 'delete' meeting.id %}" class="btn btn-danger">Delete</a>
+        </div>
+        </div>
     </div>
 </div>
 {%endblock%}
-{% comment %} 
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Meeting Details</title>
-    <style>
-        body {
-            background-color: #f2f2f2;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-        }
-
-        .container {
-            background-color: #ffffff;
-            border-radius: 10px;
-            padding: 20px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        }
-        .back-button {
-            position: absolute;
-            top: 10px;
-            left: 10px;
-            font-size: 20px;
-            padding: 10px 20px;
-            font-family: Arial, sans-serif;
-            color: #ffffff;
-            background-color: rgba(255, 0, 0, 0.5);
-            border: none;
-            border-radius: 5px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-            transition: background-color 0.3s ease;
-            text-decoration: none; /* Added to remove underline */
-        }
-
-        .back-button:hover {
-            background-color: rgba(255, 0, 0, 0.8);
-            text-decoration: none; /* Added to remove underline */
-        }
-
-        .back-button:active {
-            color: #ffffff;
-            text-decoration: none; /* Added to remove underline */
-        }
-    </style>
-</head>
-<body>
-    <a href="{% url 'welcome' %}" class="back-button">
-        Go back..
-    </a>
-    <div class="container">
-        <!-- Add your meeting details here -->
-        <h1>{{ meeting.title }}</h1>
-        <p>Date: {{ meeting.date }}</p>
-        <p>Time: {{ meeting.time }}</p>
-        <p>Location: {{meeting.room}}</p>
-        <p>Description: {{ meeting.description }}</p>
-    </div>
-</body>
-</html> {% endcomment %}

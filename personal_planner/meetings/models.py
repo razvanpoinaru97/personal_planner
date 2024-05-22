@@ -1,5 +1,6 @@
 from datetime import time
 
+from django.contrib.auth import get_user_model
 from django.db import models
 
 # Create your models here.
@@ -16,6 +17,7 @@ class Meeting(models.Model):
     time = models.TimeField(default=time(9))
     description = models.TextField()
     room = models.ForeignKey(Room, on_delete=models.CASCADE)
+    participants = models.ManyToManyField(get_user_model())
 
     def __str__(self):
         return self.title + self.date.strftime(' on (%m/%d/%Y)') + self.time.strftime(' at %I:%M %p')

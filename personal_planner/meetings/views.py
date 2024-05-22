@@ -20,18 +20,31 @@ def meetings(request):
 MeetingForm = modelform_factory(Meeting, exclude=[])
 
 def new(request):
-    return render(request, "meetings/new.html", {"rooms": Room.objects.all()})
-
-@csrf_exempt
-def create_meeting(request):
     if request.method == "POST":
-        title = request.POST['title']
-        room = request.POST['room']
-        print(f"Title: {title}, Room: {room}")
         form = MeetingForm(request.POST)
         if form.is_valid():
             form.save()
             return redirect("meetings")
     else:
         form = MeetingForm()
-        return render(request, "meetings/new.html", {"form": form, "rooms": Room.objects.all()})
+    return render(request, "meetings/new.html", {"form": form})
+
+    
+def edit(request, id):
+    meeting = get_object_or_404(Meeting, pk=id)
+    if request.method == "POST":
+        form = MeetingForm(request.POST, instance=meeting)
+        if form.is_valid():
+            form.save()
+            return redirect("detail", id=id)
+    else:
+        form = MeetingForm(instance=meeting)
+    return render(request, "meetings/edit.html", {"form": form, "meeting": meeting})
+
+def delete(request, id):
+    meeting = get_object_or_404(Meeting, pk=id)
+    if (request.method == "POST"):
+        meeting.delete()
+        return redirect("meetings")
+    else:
+        return render(request, "meetings/confirm_delete.html", {"meeting": meeting})

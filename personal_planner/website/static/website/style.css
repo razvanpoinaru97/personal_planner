@@ -21,7 +21,7 @@
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #f2f2f2;
+    background-color: #dfdfdf;
     margin: 0;
     padding: 0;
 }
@@ -38,7 +38,7 @@ body {
     background-color: white;
     border-radius: 10px;
     padding: 20px;
-    margin: 0 auto;
+    margin: 20px auto; /* Add this line to set the margin */
     width: fit-content;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
@@ -121,6 +121,47 @@ li {
     max-width: 100%; /* Add this line to limit the width to the parent container */
 }
 
+button {
+    top: 10px;
+    left: 15px;
+    font-size: 20px;
+    padding: 10px 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-family: Arial, sans-serif;
+    color: #ffffff;
+    background-color: #f2f2f2, 0.5;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+    text-decoration: none; /* Added to remove underline */
+}
+
+button:hover {
+    background-color: #f2f2f2, 0.6;
+    color: #ffffff;
+    text-decoration: none; /* Added to remove underline */
+}
+
+.form-group {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 0 auto;
+    width: fit-content;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+button:active {
+    color: #ffffff;
+    text-decoration: none; /* Added to remove underline */
+}
+
 .list-box {
     background-color: white;
     border-radius: 10px;
@@ -139,6 +180,7 @@ ul.centered-list {
 
 ul.centered-list li {
     text-align: left;
+    margin-right: 10px;
 }
 
 ul {
@@ -161,12 +203,11 @@ li {
 }
 
 .detail-container{
-    background-color: #f2f2f2;
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
     height: 80vh;
     margin: 0;
 }
-
 

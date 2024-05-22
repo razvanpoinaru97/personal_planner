@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block title %}Edit Meeting: {{ meeting.title }} {% endblock %}
+
+{% block content %}
+
+<div class="detail-container">
+    <div class="centered-rectangle">
+      <form method="post">
+        {% csrf_token %} 
+        <p>Are you sure you want to delete this meeting?</p>
+
+        <br>
+        
+        <div class="text-center">
+            <button type="submit" class="btn btn-danger">Delete</button>
+            <span style="margin-left: 20px;"></span>
+            <button type="button" class="btn btn-secondary" onclick="window.location.href='{% url 'detail' meeting.id %}'">Cancel</button>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

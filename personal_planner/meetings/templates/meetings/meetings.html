@@ -3,14 +3,17 @@
 {% block title%}Meetings List{%endblock%}
 
 {% block content %}
-    <div class="list-box">
+    <div class="list-box mt-5">
         <p>Current active meetings: {{ num_meetings }}</p>
         <ul class="centered-list">
             {% for meeting in meetings %}
                 <li>
-                    <a href="{%url 'detail' meeting.id%}"><input type="checkbox"> Meeting at {{ meeting.time }} on {{ meeting.date }} in room {{ meeting.room }}</a>
+                    <a href="{%url 'detail' meeting.id%}"> Meeting at {{ meeting.time }} on {{ meeting.date }} in room {{ meeting.room }}</a>
                 </li>
             {% endfor %}
         </ul>
+        <div class="text-center">
+            <a href="{%url 'new'%}" class="btn btn-primary">New Meeting</a>
+        </div>
     </div>
 {% endblock %}
