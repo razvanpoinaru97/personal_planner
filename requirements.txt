@@ -1,2 +1,4 @@
 django
 faker
+python-decouple
+mysqlclient

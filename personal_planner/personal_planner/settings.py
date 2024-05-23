@@ -83,7 +83,7 @@ DATABASES = {
         'NAME': 'personal_planner_mariadb',
         'USER': 'razvan',
         'PASSWORD': 'Mzalpq123!',
-        'HOST': 'localhost',
+        'HOST': 'personal_planner_mariadb',
         'PORT': '3306',
     }
 }
