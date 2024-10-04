@@ -12,6 +12,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       SECRET_KEY: ${{ secrets.DJANGO_SECRET_KEY }}
+      DB_PASSWORD: ${{ secrets.MYSQL_PASSWORD }}
       DEBUG: True
       DJANGO_ALLOWED_HOSTS: localhost 127.0.0.1 [::1]
       MYSQL_ROOT_PASSWORD: ${{ secrets.MYSQL_ROOT_PASSWORD }}

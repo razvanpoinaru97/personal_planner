@@ -14,6 +14,7 @@ Before running the docker container, the user needs to set up their .env file:
 ```
 # Django settings
 SECRET_KEY=  ###################################### Secret key you need to set up 
+DB_PASSWORD = ################# for docker purposes
 DEBUG=True
 DJANGO_ALLOWED_HOSTS=localhost 127.0.0.1 [::1]
 
